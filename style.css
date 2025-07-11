@@ -11,11 +11,11 @@ body {
   line-height: 1.6;
 }
 
-/* Long Header */
+/* Header Section */
 #header {
   width: 100%;
   height: 100vh;
-  background-image: url(images/landscape_image.jpeg);
+  background-image: url(images/landscape_back.jpeg);
   background-size: cover;
   background-position: center;
 }
@@ -25,7 +25,7 @@ body {
 }
 
 nav{
-  display: flex;
+  display: flex; 
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -43,15 +43,15 @@ nav ul li {
   margin: 10px 20px;
 }
 
-/* Navigation Links */
-nav ul li a {
+
+nav ul li a { /* Links */
   color: #333;
   text-decoration: none;
   font-size: 18px;
   position: relative;
 }
 
-nav ul li a::after {
+nav ul li a::after { /* Underline effect */
   content: '';
   position: absolute;
   width: 0;
@@ -78,5 +78,81 @@ nav ul li a:hover::after {
 
 .header-text h1 {
   font-size: 50px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* About Section */
+#about {
+  padding: 50px 0;
+}
+
+.row {
+  display: flex; /* Use flexbox to display side by side */
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-col-1 {
+  flex-basis: 35%; /* Set the width of the first column */
+}
+
+.about-col-1 img {
+  width: 100%; /* Make the image responsive */
+  border-radius: 20px; /* Add some border radius for aesthetics */
+}
+
+.about-col-2 {
+  flex-basis: 60%; /* Set the width of the second column */
+}
+
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+/* Tabs Section */
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px 0; 
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer; /* Change cursor to pointer for clickable links */
+  position: relative;
+}
+
+.tab-links::after { /* Underline effect for tabs */
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #af404f; /* Color for the underline */
+  bottom: -5px; /* Position the line below the text */
+  left: 0;
+  transition: 0.3s; /* Smooth transition for the underline */
+}
+
+.tab-links.active-link::after { /* Active link underline effect */
+  width: 50%;
+}
+
+.tab-contents ul li {
+  list-style: none; /* Remove bullet points */
+  margin: 10px 0; /* Add some space between list items */
+}
+
+.tab-contents ul li span {
+  color: #af404f; /* Color for the list items */
+  font-size: 18px; /* Font size for the list items */
+}
+
+.tab-contents {
+  display: none; /* Hide all tab contents by default */
+}
+
+.tab-contents.active-tab {
+  display: block; /* Show the active tab content */
 }
