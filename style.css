@@ -69,7 +69,6 @@ nav ul li a:hover::after {
 .header-text{
   display: inline-block;
   padding: 20px;
-  /* Make transparent background */
   background-color: #afcfe6;
   border-radius: 20px;
   margin-top: 20%;
@@ -155,4 +154,50 @@ nav ul li a:hover::after {
 
 .tab-contents.active-tab {
   display: block; /* Show the active tab content */
+}
+
+/* Projects */
+#projects {
+  padding: 50px 0;
+}
+
+.projects-list {
+  display: flex; /* Use flexbox to display projects side by side */
+  gap: 40px;
+  margin-top: 50px; 
+  min-width: 250px; /* Minimum width for responsiveness */
+}
+
+.projects-list div {
+  background: #afcfe6; /* Background color for project cards */
+  padding: 20px;
+  font-size: 18px; /* Font size for project descriptions */
+  font-weight: 500; /* Font weight for project descriptions */
+  border-radius: 20px; /* Rounded corners for project cards */
+  flex: 1; /* Allow cards to grow and shrink equally */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background and transform */ 
+}
+
+.projects-list div:hover {
+  background-color: #af404f; /* Change background color on hover */
+  transform: translateY(-10px); /* Move the link up on hover */
+  color: white; /* Change text color on hover */
+  text-decoration: underline; /* Underline effect on hover */
+}
+
+.projects-list div:hover a {
+  color: white; /* Change link color on hover */
+}
+
+.projects-list div h2 {
+  font-size: 24px; /* Font size for project titles */
+  margin-bottom: 10px; /* Space below project titles */
+}
+
+.projects-list div a {
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Default link color */
+  font-weight: 600; /* Bold project links */
+  margin-top: 10px; /* Space above project links */
+  display: inline-block; /* Make the link a block element */
 }
