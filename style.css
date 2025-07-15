@@ -11,7 +11,7 @@ body {
   line-height: 1.6;
 }
 
-/* Header Section */
+/* Header */
 #header {
   width: 100%;
   height: 100vh;
@@ -44,7 +44,7 @@ nav ul li {
 }
 
 
-nav ul li a { /* Links */
+nav ul li a {
   color: #333;
   text-decoration: none;
   font-size: 18px;
@@ -109,7 +109,7 @@ nav ul li a:hover::after {
   font-weight: 600;
 }
 
-/* Tabs Section */
+/* Tabs */
 .tab-titles {
   display: flex;
   margin: 20px 0 40px 0; 
@@ -200,4 +200,86 @@ nav ul li a:hover::after {
   font-weight: 600; /* Bold project links */
   margin-top: 10px; /* Space above project links */
   display: inline-block; /* Make the link a block element */
+}
+
+/* Hobbies */
+#hobbies {
+  padding: 50px 0;
+}
+.hobbies-list {
+  display: flex; /* Use flexbox to display hobbies side by side */
+  gap: 40px;
+  margin-top: 50px;
+  min-width: 250px; /* Minimum width for responsiveness */
+  flex-wrap: wrap; /* Allow wrapping of hobby cards */
+  justify-content: center; /* Center the hobby cards */
+}
+.piano {
+  border-radius: 20px; /* Rounded corners for hobby cards */
+  position: relative; /* Position relative for absolute positioning of images */
+  overflow: hidden; /* Hide overflow for rounded corners */
+}
+.piano img {
+  width: 100%; /* Make images responsive */
+  border-radius: 20px; /* Rounded corners for images */
+  display: block; /* Make images block elements */
+  transition: transform 0.3s ease; /* Smooth transition for image scaling */
+}
+.layer {
+  width: 100%; /* Full width for the overlay */
+  height: 0; /* Full height for the overlay */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #af404f); /* Semi-transparent overlay */
+  border-radius: 20px; /* Rounded corners for the overlay */
+  position: absolute; /* Position absolute for overlay */
+  left: 0; /* Align to the left */
+  bottom: 0; /* Align to the bottom */
+  overflow: hidden; /* Hide overflow for rounded corners */
+  color: white; /* Text color for the overlay */
+  display: flex; /* Use flexbox for centering content */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  text-align: center; /* Center text */
+  font-size: 18px; /* Font size for overlay text */
+  transition: height 0.3s ease; /* Smooth transition for overlay height */
+}
+.layer h3 {
+  font-weight: 600; /* Bold hobby titles */
+  font-size: 24px; /* Font size for hobby titles */
+  margin-bottom: 10px; /* Space below hobby titles */
+}
+.layer a {
+  margin-top: 10px; /* Space above links */
+  color: white; /* Link color in the overlay */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 18px; /* Font size for links */
+  line-height: 1.5; /* Line height for links */
+  background: #af404f; /* Background color for links */
+  width: 100px; /* Fixed width for links */
+  height: 30px; /* Fixed height for links */
+  border-radius: 20px; /* Rounded corners for links */
+  text-align: center; /* Center text in links */
+}
+.piano:hover img{
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+  transition: transform 0.3s ease; /* Smooth transition for the image */
+}
+.piano:hover .layer {
+  height: 100%; /* Expand the overlay to full height on hover */
+  transition: height 0.3s ease; /* Smooth transition for the overlay */
+}
+.btn {
+  display: block; /* Make the button a block element */
+  margin: 50px auto; /* Center the button */
+  width: fit-content; /* Fit the button to its content */
+  border: 1px solid #af404f; /* Border color for the button */
+  padding: 10px 20px; /* Padding for the button */
+  border-radius: 5px; /* Rounded corners for the button */
+  text-decoration: none; /* Remove underline from the button */
+  color: #af404f; /* Text color for the button */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+.btn:hover {
+  background-color: #af404f; /* Change background color on hover */
+  color: white; /* Change text color on hover */
 }
