@@ -269,6 +269,7 @@ nav ul li a:hover::after {
   transition: height 0.3s ease; /* Smooth transition for the overlay */
 }
 .btn {
+  background-color: #f0f0f0; /* Transparent background for the button */
   display: block; /* Make the button a block element */
   margin: 50px auto; /* Center the button */
   width: fit-content; /* Fit the button to its content */
@@ -282,4 +283,59 @@ nav ul li a:hover::after {
 .btn:hover {
   background-color: #af404f; /* Change background color on hover */
   color: white; /* Change text color on hover */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Contact */
+.contact-left {
+  flex-basis: 50%; /* Set the width of the left column */
+}
+.contact-right {
+  flex-basis: 50%; /* Set the width of the right column */
+}
+.contact-left p {
+  margin-top: 30px; /* Space above the paragraph */
+  font-size: 18px; /* Font size for the paragraph */
+}
+.contact-left p i {
+  margin-right: 10px; /* Space between the icon and text */
+  color: #af404f; /* Color for the icon */
+  font-size: 20px; /* Font size for the icon */
+}
+.social-icons {
+  margin-top: 20px; /* Space above the social icons */
+}
+.social-icons a {
+  text-decoration: none; /* Remove underline from social icons */
+  color: #333; /* Color for social icons */
+  font-size: 24px; /* Font size for social icons */
+  margin-right: 10px; /* Space between social icons */
+  display: inline-block; /* Make social icons inline-block elements */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+}
+.social-icons a:hover {
+  color: #af404f; /* Change icon color on hover */
+  transform: translateY(-5px); /* Move the icon up on hover */
+}
+.btn.btn2 {
+  display: inline-block;
+}
+.contact-right form {
+  width: 100%; /* Full width for the form */
+}
+form input, form textarea {
+  width: 100%; /* Full width for inputs and textarea */
+  border: 0;
+  outline: none; /* Remove outline for inputs and textarea */
+  background-color: #f0f0f0; /* Light background color for inputs and textarea */ 
+  color: #333; /* Text color for inputs and textarea */
+  font-size: 16px; /* Font size for inputs and textarea */
+  padding: 10px; /* Padding for inputs and textarea */
+  margin: 10px 0; /* Space between inputs and textarea */
+  border-radius: 5px; /* Rounded corners for inputs and textarea */
+}
+form .btn2 {
+  padding: 10px 20px; /* Padding for the submit button */
+  font-size: 16px; /* Font size for the submit button */
+  margin-top: 10px; /* Space above the submit button */
 }
