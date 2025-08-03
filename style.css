@@ -4,13 +4,11 @@
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
-
 body {
   background-color: #BFC3BA;
   color: #333;
   line-height: 1.6;
 }
-
 /* Header */
 #header {
   width: 100%;
@@ -19,38 +17,31 @@ body {
   background-size: cover;
   background-position: center;
 }
-
 .container{
   padding: 10px 10%;
 }
-
 nav{
   display: flex; 
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 .logo {
   width: 200px;
   font-size: 20px;
 }
-
 /* Navigation Bar */
 nav ul li {
   display: inline-block; /* Keeps the list items in a single line */
   list-style: none;
   margin: 10px 20px;
 }
-
-
 nav ul li a {
   color: #333;
   text-decoration: none;
   font-size: 18px;
   position: relative;
 }
-
 nav ul li a::after { /* Underline effect */
   content: '';
   position: absolute;
@@ -61,11 +52,9 @@ nav ul li a::after { /* Underline effect */
   left: 0;
   transition: width 0.3s ease; /* Smooth transition for the underline */
 }
-
 nav ul li a:hover::after {
   width: 100%; /* Expand the underline to full width on hover */
 }
-
 .header-text{
   display: inline-block;
   padding: 20px;
@@ -74,47 +63,38 @@ nav ul li a:hover::after {
   margin-top: 20%;
   font-size: 30px;
 }
-
 .header-text h1 {
   font-size: 50px;
   margin-top: 20px;
 }
-
 /* About Section */
 #about {
   padding: 50px 0;
 }
-
 .row {
   display: flex; /* Use flexbox to display side by side */
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 .about-col-1 {
   flex-basis: 35%; /* Set the width of the first column */
 }
-
 .about-col-1 img {
   width: 100%; /* Make the image responsive */
   border-radius: 20px; /* Add some border radius for aesthetics */
 }
-
 .about-col-2 {
   flex-basis: 60%; /* Set the width of the second column */
 }
-
 .sub-title {
   font-size: 60px;
   font-weight: 600;
 }
-
 /* Tabs */
 .tab-titles {
   display: flex;
   margin: 20px 0 40px 0; 
 }
-
 .tab-links {
   margin-right: 50px;
   font-size: 18px;
@@ -122,7 +102,6 @@ nav ul li a:hover::after {
   cursor: pointer; /* Change cursor to pointer for clickable links */
   position: relative;
 }
-
 .tab-links::after { /* Underline effect for tabs */
   content: '';
   position: absolute;
@@ -133,41 +112,33 @@ nav ul li a:hover::after {
   left: 0;
   transition: 0.3s; /* Smooth transition for the underline */
 }
-
 .tab-links.active-link::after { /* Active link underline effect */
   width: 50%;
 }
-
 .tab-contents ul li {
   list-style: none; /* Remove bullet points */
   margin: 10px 0; /* Add some space between list items */
 }
-
 .tab-contents ul li span {
   color: #af404f; /* Color for the list items */
   font-size: 18px; /* Font size for the list items */
 }
-
 .tab-contents {
   display: none; /* Hide all tab contents by default */
 }
-
 .tab-contents.active-tab {
   display: block; /* Show the active tab content */
 }
-
 /* Projects */
 #projects {
   padding: 50px 0;
 }
-
 .projects-list {
   display: flex; /* Use flexbox to display projects side by side */
   gap: 40px;
   margin-top: 50px; 
   min-width: 250px; /* Minimum width for responsiveness */
 }
-
 .projects-list div {
   background: #afcfe6; /* Background color for project cards */
   padding: 20px;
@@ -177,23 +148,19 @@ nav ul li a:hover::after {
   flex: 1; /* Allow cards to grow and shrink equally */
   transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background and transform */ 
 }
-
 .projects-list div:hover {
   background-color: #af404f; /* Change background color on hover */
   transform: translateY(-10px); /* Move the link up on hover */
   color: white; /* Change text color on hover */
   text-decoration: underline; /* Underline effect on hover */
 }
-
 .projects-list div:hover a {
   color: white; /* Change link color on hover */
 }
-
 .projects-list div h2 {
   font-size: 24px; /* Font size for project titles */
   margin-bottom: 10px; /* Space below project titles */
 }
-
 .projects-list div a {
   text-decoration: none; /* Remove underline from links */
   color: #333; /* Default link color */
@@ -201,7 +168,6 @@ nav ul li a:hover::after {
   margin-top: 10px; /* Space above project links */
   display: inline-block; /* Make the link a block element */
 }
-
 /* Hobbies */
 #hobbies {
   padding: 50px 0;
@@ -338,4 +304,73 @@ form .btn2 {
   padding: 10px 20px; /* Padding for the submit button */
   font-size: 16px; /* Font size for the submit button */
   margin-top: 10px; /* Space above the submit button */
+}
+/* CSS for small screens */
+nav .fa-solid {
+  display: none; /* Hide the icons by default */
+}
+
+@media only screen and (max-width: 768px) {
+  #header {
+    background-image: url(images/landscape_small_screen.jpeg);
+    width: 100%;
+  }
+  .header-text {
+    margin-top: 30%;
+    padding: 10px;
+  }
+  .header-text h1 {
+    font-size: 30px; /* Smaller font size for small screens */
+  }
+  nav .fa-solid {
+    display: block; /* Show the icons on small screens */
+    font-size: 24px; /* Increase icon size for better visibility */
+  }
+  nav ul {
+    background-color: #afcfe6; /* Background color for the menu */
+    position: fixed; /* Position the menu absolutely */
+    top: 0; /* Position below the header */
+    right: -200px; /* Align to the right */
+    width: 200px; /* Fixed width for the menu */
+    height: 100vh; /* Full height for the menu */
+    padding-top: 60px; /* Space for the header */
+    transition: right 0.3s ease; /* Smooth transition for the menu */
+  }
+  nav ul li {
+    display: block; /* Stack the menu items vertically */
+    margin: 25px; /* Space between menu items */
+  }
+  nav ul .fa-solid {
+    position: absolute; /* Position the close icon */
+    top: 20px; /* Position at the top */
+    left: 20px; /* Position to the left */
+    cursor: pointer; /* Change cursor to pointer */
+    z-index: 2; /* Ensure the close icon is above other elements */
+  }
+  .sub-title {
+    font-size: 40px; /* Smaller font size for sub-title on small screens */
+  }
+  .about-col-1, .about-col-2 {
+    flex-basis: 100%; /* Full width for both columns */
+    text-align: center; /* Center the text */
+  }
+  .about-col-1 {
+    margin-bottom: 20px; /* Space below the image */
+  }
+  .about-col-1 {
+    font-size: 16px; /* Smaller font size for the about section */
+  }
+  .tab-links {
+    font-size: 16px; /* Smaller font size for tab links */
+    margin-right: 20px; /* Reduced margin for tab links */
+  }
+  .contact-left, .contact-right {
+    flex-basis: 100%; /* Full width for both columns */
+    text-align: center; /* Center the text */
+  }
+  .projects-list, .hobbies-list {
+    flex-direction: column; /* Stack projects and hobbies vertically */
+    align-items: center; /* Center the items */
+    width: 100%; /* Full width for projects and hobbies */
+  }
 }
