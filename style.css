@@ -377,3 +377,8 @@ nav .fa-solid {
     width: 100%; /* Full width for projects and hobbies */
   }
 }
+#msg {
+  color: #af404f; /* Color for the span element */
+  margin-top: -40px; /* Adjust the margin to position it correctly */
+  display: block; /* Make the span a block element */
+}
